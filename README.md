@@ -1,5 +1,5 @@
-AWS EFS CSI Driver - Forked Image
-=================================
+AWS EFS CSI Driver Memory Leak Fix Image
+========================================
 
 Temporary image for resolving a memory leak bug with stunnel.
 
