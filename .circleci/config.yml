@@ -1,0 +1,22 @@
+version: 2.1
+
+workflows:
+  build:
+    jobs:
+      - build:
+          context: docker-publishing
+          filters:
+            branches:
+              only: [ main ]
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-2004:202111-02
+    steps:
+      - checkout
+      - run:
+          name: Build and Release
+          command: |
+            docker build docker.io/skpr/aws-efs-csi-driver:v1.4.2
+            docker push docker.io/skpr/aws-efs-csi-driver:v1.4.2
