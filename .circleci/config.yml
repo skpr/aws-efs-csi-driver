@@ -18,5 +18,5 @@ jobs:
       - run:
           name: Build and Release
           command: |
-            docker build docker.io/skpr/aws-efs-csi-driver:v1.4.2
+            docker build -t docker.io/skpr/aws-efs-csi-driver:v1.4.2 .
             docker push docker.io/skpr/aws-efs-csi-driver:v1.4.2
